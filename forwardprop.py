@@ -29,7 +29,7 @@ def forward(X, W1, b1, W2, b2):
 	Y = expA / expA.sum(axis=1, keepdims=True)
 	return Y
 
-def classfication_rate(Y, P):
+def classification_rate(Y, P):
 	n_correct = 0
 	n_total = 0
 	for i in xrange(len(Y)):
@@ -46,5 +46,4 @@ plt.scatter(X[:,0], X[:,1], c=P, s=100, alpha=0.5)
 plt.show()
 
 print('classification rate for randomly chosen weights:')
-print(classfication_rate(Y, P))
-
+print(classification_rate(Y, P))
