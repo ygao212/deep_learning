@@ -20,7 +20,7 @@ def get_data():
 		X2[n, t+D-1] = 1
 
 	Z = np.zeros((N, 4))
-	Z[np.arragnge(N), X[:, D-1].astype(np.int32)] = 1
+	Z[np.arange(N), X[:, D-1].astype(np.int32)] = 1
 	assert(np.abs(X2[:, -4:] - Z).sum() < 10e-10)
 	return X2, Y
 
